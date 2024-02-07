@@ -1,0 +1,378 @@
+@font-face {
+  font-family: "Exo-VariableFont_wght";
+  src: local("Exo-VariableFont_wght"), local("Exo-VariableFont_wght"),
+    url("./fonts/Exo-VariableFont_wght.ttf") format("truetype");
+}
+
+body {
+  margin: 0;
+  font-family: "Exo-VariableFont_wght";
+  overflow: hidden;
+}
+
+#imgContainer {
+  margin: 4px;
+  height: 200px;
+  position: relative;
+}
+
+#imgContainer img {
+  height: 100%;
+  border-radius: 2px;
+  border-radius: 10px;
+}
+
+#imgContainer img:hover {
+  cursor: pointer;
+  filter: brightness(0.7);
+}
+
+#render {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 103px;
+}
+
+#renderFavorit {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 103px;
+}
+
+/* ------------------------------------- Bild vergrößert --------------------------------- */
+
+#showImg {
+  background-color: black;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  z-index: 300;
+}
+
+.d-none {
+  display: none !important;
+}
+
+#showImgDesigne {
+  height: 70vh;
+  width: 100%;
+}
+
+#showImgDesigne #imgBig {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+}
+
+.backArrow {
+  width: 40px;
+  position: absolute;
+  top: 24px;
+  right: 90px;
+}
+
+.backArrow:hover {
+  filter: drop-shadow(0px 0px 4px white);
+}
+
+.download {
+  width: 35px;
+  position: absolute;
+  top: 24px;
+  right: 24px;
+}
+
+.download:hover {
+  filter: drop-shadow(0px 0px 4px white);
+}
+
+#turnRight {
+  font-size: 40px;
+  text-decoration: none;
+  color: white;
+  position: absolute;
+  right: 24px;
+  top: 50%;
+  opacity: 0.1;
+}
+
+#turnRight:hover {
+  opacity: 1;
+  filter: drop-shadow(0px 0px 1px white);
+}
+
+#turnLeft {
+  font-size: 40px;
+  text-decoration: none;
+  color: white;
+  position: absolute;
+  left: 24px;
+  top: 50%;
+  opacity: 0.1;
+}
+
+#turnLeft:hover {
+  opacity: 1;
+  filter: drop-shadow(0px 0px 1px white);
+}
+
+#heart {
+  width: 34px;
+  position: absolute;
+  top: 26px;
+  right: 160px;
+}
+
+#imgContainer .heartFavorit {
+  height: 24px;
+  width: 24px;
+  position: absolute;
+  bottom: 8px;
+  right: 8px;
+}
+
+.heartOption {
+  width: 24px;
+  height: 24px !important;
+  position: absolute;
+  left: 8px;
+  top: 8px;
+  filter: drop-shadow(0px 0px 6px white);
+}
+
+.heartOptionColor {
+  filter: invert();
+}
+
+/* ------------------------------------------ Menubar ------------------------------------ */
+
+#header {
+  height: 100px;
+  width: 100%;
+  background-color: rgb(70, 70, 70);
+  position: absolute;
+  top: 0;
+  color: white;
+  flex-direction: row;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  z-index: 200;
+}
+
+.menu {
+  position: relative;
+}
+
+#menuContainer {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+}
+
+.btnDesigne {
+  background-color: white;
+  border: none;
+  padding: 8px;
+  width: 100px;
+  border-radius: 4px;
+  cursor: pointer;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+}
+
+.btnDesigne:hover {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: solid 1px;
+  box-shadow: 0px 5px 5px 0px black;
+  font-size: 14px;
+}
+
+.dd-content a {
+  display: block;
+  color: black;
+  background-color: white;
+  padding: 8px;
+  text-decoration: none;
+  border: solid 0.5px;
+  width: 100px;
+  border-radius: 0px 0px 8px 8px;
+  margin-top: -4px;
+  position: relative;
+  box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.3);
+  text-align: center;
+}
+
+.dd-content a:hover {
+  font-weight: bold;
+}
+
+.dd-content {
+  opacity: 0;
+  position: absolute;
+  top: 75px;
+  right: -1px;
+  transition: opacity 0.5s ease-in-out, transform 200ms ease-in-out;
+  transform: translateY(-200px);
+  z-index: 111;
+}
+
+.menu:hover .dd-content {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+#albaniaMenu {
+  z-index: 1000;
+}
+
+#japanMenu {
+  z-index: 999;
+}
+
+#egyptMenu {
+  z-index: 998;
+}
+
+.backgroundStart {
+  width: 100%;
+  height: 100%;
+  z-index: -111;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-image: url(./img/go-pro-1478810_640.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.backgroundStart img {
+  width: 100%;
+  height: 100%;
+}
+
+#slogan {
+  position: absolute;
+  font-size: 50px;
+  top: 30%;
+  font-weight: bold;
+  font-style: italic;
+  color: white;
+  text-decoration: overline;
+  font-family: inherit;
+  width: 100%;
+  text-align: center;
+}
+
+.flag {
+  width: 60px;
+}
+
+.place {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  gap: 16px;
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.menuTextLeft {
+  font-size: 32px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+#intro {
+  width: 100%;
+  top: 70%;
+  position: absolute;
+  font-weight: bold;
+  color: wheat;
+  background-color: rgba(0, 0, 0, 0.5);
+  font-size: 18px;
+  text-align: center;
+  padding: 24px 10%;
+  box-sizing: border-box;
+}
+
+#logoBm {
+  width: 48px;
+}
+
+/* ----------------------------- Responsiv ------------------------- */
+
+@media (max-width: 700px) {
+  .menuTextLeft {
+    display: none;
+  }
+}
+
+@media (max-width: 500px) {
+  .place {
+    display: none;
+  }
+  #render {
+    justify-content: center;
+  }
+  #renderFavorit {
+    justify-content: center;
+  }
+  #intro {
+    top: 50%;
+  }
+}
+
+@media (max-width: 450px) {
+  .btnDesigne {
+    width: 70px;
+    font-size: 14px;
+  }
+
+  .dd-content a {
+    width: 71px;
+  }
+
+  #slogan {
+    font-size: 42px;
+  }
+
+  #turnLeft {
+    font-size: 55px;
+    opacity: 1;
+    top: unset;
+    left: unset;
+    left: 56px;
+    bottom: 24px;
+  }
+
+  #turnRight {
+    font-size: 55px;
+    right: 56px;
+    bottom: 24px;
+    opacity: 1;
+    top: unset;
+  }
+
+  .backArrow {
+    left: 100px;
+  }
+
+  .download {
+    right: 100px;
+  }
+}

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Besim's Bildergalerie</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+
+
+<body onload="render(`japan`)">
+
+    <header id="header">
+        <div class="place">Besim in <br> <img class="flag" src="./img/japan flagge – Google Suche.png" alt=""></div>
+
+        <div id="menuContainer">
+            <a href="./index.html" class="btnDesigne">Start</a>
+            <nav class="menu">
+                <a href="#" class="btnDesigne">Fotogallery</a>
+                <div class="dd-content">
+                    <a id="albaniaMenu" href="albania.html">Albanien</a>
+                    <a id="japanMenu" href="japan.html">Japan</a>
+                    <a id="egyptMenu" href="egypt.html">Ägypten</a>
+                </div>
+            </nav>
+            <a href="./favoriten.html" class="btnDesigne">Favoriten</a>
+        </div>
+
+    </header>
+
+
+    <div id="render"></div>
+    <div id="showImg" class="d-none"></div>
+
+</body>
+
+
+</html>
